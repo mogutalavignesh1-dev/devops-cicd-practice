@@ -1,7 +1,3 @@
-FROM alpine:latest
+FROM nginx:latest
 
-WORKDIR /app
-
-COPY app.txt .
-
-CMD ["cat", "app.txt"]
+COPY app.txt /usr/share/nginx/html/index.html
